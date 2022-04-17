@@ -36,6 +36,12 @@ const Header = () => {
             Services
           </Link>
           <Link
+            to="/blog"
+            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
+          >
+            Blog
+          </Link>
+          <Link
             to="/contact"
             className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
           >

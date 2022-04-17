@@ -1,9 +1,9 @@
 import React from "react";
-
+import bottomPattern from "../../Assets/images/download/slider-bottom-pattern.png";
 const Checkout = () => {
   return (
-    <div className="bg-yellow-400 ">
-      <div className="bg-white rounded-br-[400px]">
+    <div className="bg-yellow-400 relative pb-40">
+      <div className="">
         <div className="container mx-auto">
           <div className="text-center  w-[500px] py-8 mx-auto">
             <div className="w-full space-y-4">
@@ -74,6 +74,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
+      <img src={bottomPattern} alt="" className="w-full absolute bottom-0" />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto  bottom-0">
       <div className=" mx-auto">
         <footer className="p-4 bg-white sm:p-6 dark:bg-gray-800">
           <div className="md:flex md:justify-between">
