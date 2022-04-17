@@ -5,6 +5,7 @@ import img1 from "../../Assets/images/service/color-icon-1.png";
 import img2 from "../../Assets/images/service/color-icon-2.png";
 import img3 from "../../Assets/images/service/color-icon-6.png";
 import Service from "../Service/Service";
+import bottomPattern from "../../Assets/images/download/slider-bottom-pattern.png";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -35,8 +36,8 @@ const Services = () => {
     },
   ];
   return (
-    <div className="bg-yellow-400 py-10">
-      <div className="container  mx-auto text-center">
+    <div className="bg-yellow-400 py-10 relative ">
+      <div className="container  mx-auto text-center mb-40">
         <h1 className="font-bold text-5xl py-8">Services</h1>
         <div className="grid grid-cols-3 gap-6 py-10">
           {services.map((service) => (
@@ -50,6 +51,7 @@ const Services = () => {
           Checkout
         </button>
       </div>
+      <img src={bottomPattern} alt="" className="w-full absolute bottom-0" />
     </div>
   );
 };
