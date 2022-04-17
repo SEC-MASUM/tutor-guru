@@ -1,6 +1,5 @@
 import React from "react";
 import Subject from "../Subject/Subject";
-import math from "../../Assets/images/subject/math.png";
 import english from "../../Assets/images/subject/English.png";
 import science from "../../Assets/images/subject/science.png";
 import physics from "../../Assets/images/subject/physics.png";
@@ -47,9 +46,9 @@ const Subjects = () => {
     },
   ];
   return (
-    <div className="container mx-auto text-center">
+    <div className="container mx-auto  mb-10 text-center">
       <h1 className="font-bold text-5xl py-8">Subjects</h1>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3  gap-6 py-10 ">
         {subjects.map((subject) => (
           <Subject key={subject.id} subject={subject}></Subject>
         ))}

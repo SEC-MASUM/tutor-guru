@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Subjects></Subjects>
-      <Services></Services>
+      <Services ></Services>
     </div>
   );
 };
