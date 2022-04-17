@@ -57,7 +57,7 @@ const Header = () => {
           <div className="flex items-center space-x-1">
             {user ? (
               <Link
-                to="/login"
+                to="/home"
                 onClick={logout}
                 className="text-white bg-rose-600 px-4 py-1.5 rounded-full"
               >
