@@ -28,7 +28,7 @@ const Login = () => {
     navigate(from, { replace: true });
   }
   if (error) {
-    console.error(error);
+    console.error(error.message);
   }
 
   return (
@@ -70,7 +70,7 @@ const Login = () => {
             ""
           )}
           <p>
-            New to Red Onion?{" "}
+            New to Tutor Guru?{" "}
             <Link to="/signup">
               <span className="text-rose-600">Create An Account</span>
             </Link>

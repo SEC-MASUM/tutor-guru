@@ -13,14 +13,14 @@ const Checkout = () => {
               <hr className=" border-gray-800" />
 
               <input
-                id="delivery-method"
+                id="student-name"
                 className="focus:ring-gray-300  text-gray-800 font-medium focus:ring-2 focus:bg-white w-full bg-gray-100 border-0 shadow rounded-lg px-4 py-2 mb-5"
                 type="text"
                 placeholder="Student Name"
               />
 
               <input
-                id="delivery-method"
+                id="parent-name"
                 className="focus:ring-gray-300  text-gray-800 font-medium focus:ring-2 focus:bg-white w-full bg-gray-100 border-0 shadow rounded-lg px-4 py-2 mb-5"
                 type="text"
                 placeholder="Parent/Guardian Name"
@@ -35,22 +35,22 @@ const Checkout = () => {
                 id="house"
                 className="text-gray-800 font-medium  focus:ring-gray-300  focus:ring-2 focus:bg-white w-full bg-gray-100 border-0 shadow  rounded-lg px-4 py-2 mb-5"
                 type="text"
-                placeholder="House, Flat, suite or floor"
+                placeholder="Flat, suite or floor"
               />
               <input
-                id="house"
+                id="city"
                 className="text-gray-800 font-medium  focus:ring-gray-300  focus:ring-2 focus:bg-white w-full bg-gray-100 border-0 shadow  rounded-lg px-4 py-2 mb-5"
                 type="text"
                 placeholder="City"
               />
               <input
-                id="business-name"
+                id="institute-name"
                 className="text-gray-800 font-medium  focus:ring-gray-300  focus:ring-2 focus:bg-white  w-full bg-gray-100 border-0 shadow  rounded-lg px-4 py-2 mb-5"
                 type="text"
                 placeholder="Academic Institute Name"
               />
               <input
-                id="business-name"
+                id="class"
                 className="text-gray-800 font-medium  focus:ring-gray-300  focus:ring-2 focus:bg-white  w-full bg-gray-100 border-0 shadow  rounded-lg px-4 py-2 mb-5"
                 type="text"
                 placeholder="Class"
