@@ -19,7 +19,7 @@ const Banner = () => {
           <h1 className="inline-block bg-white text-rose-600 font-bold text-6xl px-6 py-3">
             Professional Tutor
           </h1>
-          <h1 className=" font-bold text-5xl px-6 py-3">For Your Children</h1>
+          <h1 className="text-gray-800 font-bold text-5xl px-6 py-3">For Your Children</h1>
         </div>
       </div>
       <img src={bottomPattern} alt="" className="w-full absolute bottom-0" />
