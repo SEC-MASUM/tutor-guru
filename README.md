@@ -4,6 +4,30 @@
 
 ### Live website link : https://tutor-guru-01.web.app
 
+- Tutor Guru is a independent tutor service website
+- Here has Home, blog, Contact, AboutMe Pages.
+- In Home Page has Header, Banner, Subjects, Services and Footer Section
+- Authentication System is implemented by Email-Password and Google Account
+- Used technology names are given below
+
+## React Router
+```bash
+# with npm
+$ npm install react-router-dom@6
+
+# with yarn
+$ yarn add react-router-dom@6
+```
+
+## React Firebase Hooks
+```bash
+# with npm
+npm install --save react-firebase-hooks
+
+# with yarn
+yarn add react-firebase-hooks
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
