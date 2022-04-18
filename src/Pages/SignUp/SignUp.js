@@ -22,7 +22,7 @@ const SignUp = () => {
 
   let from = location.state?.from?.pathname || "/";
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, user, loading, createError] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -47,6 +47,15 @@ const SignUp = () => {
   if (user) {
     // navigate(from, { replace: true });
     console.log(user);
+  }
+  let errorElement;
+  if (createError || updateError) {
+    console.error(createError || updateError);
+    errorElement = (
+      <p className="text-red-600 font-medium pb-4">
+        {createError?.message || updateError?.message}
+      </p>
+    );
   }
 
   return (
@@ -98,11 +107,7 @@ const SignUp = () => {
             >
               Sign Up
             </button>
-            {error ? (
-              <p className="text-red-600 font-medium pb-4">{error.message}</p>
-            ) : (
-              ""
-            )}
+            {errorElement}
           </form>
 
           <p>
