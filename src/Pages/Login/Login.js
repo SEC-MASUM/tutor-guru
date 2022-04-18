@@ -40,7 +40,11 @@ const Login = () => {
     const email = emailRef.current.value;
     if (email) {
       await sendPasswordResetEmail(email);
-      toast("Sent email");
+      if (passwordResetError || signInError || sending) {
+        toast(passwordResetError.message);
+      } else {
+        toast("Sent email");
+      }
     } else {
       toast("Please enter your email address");
     }
