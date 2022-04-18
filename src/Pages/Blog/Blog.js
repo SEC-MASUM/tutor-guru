@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import image1 from "../../Assets/images/blog/authentication-vs-authorizations.png";
+import image2 from "../../Assets/images/blog/Best-Firebase-Alternatives-.png";
+import image3 from "../../Assets/images/blog/firebase-services.png";
 
 const Blog = () => {
   return (
@@ -9,11 +12,7 @@ const Blog = () => {
         <div className="max-w-lg mx-auto">
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
             <Link to="">
-              <img
-                className="rounded-t-lg"
-                src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                alt=""
-              />
+              <img className="rounded-t-lg" src={image1} alt="" />
             </Link>
             <div className="p-5">
               <Link to="">
@@ -38,7 +37,6 @@ const Blog = () => {
                   organization. And it is about internal settings.
                 </span>
               </p>
-              
             </div>
           </div>
         </div>
@@ -46,23 +44,29 @@ const Blog = () => {
         <div className="max-w-lg mx-auto">
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
             <Link to="">
-              <img
-                className="rounded-t-lg"
-                src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                alt=""
-              />
+              <img className="rounded-t-lg" src={image2} alt="" />
             </Link>
             <div className="p-5">
               <Link to="">
                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
-                  Noteworthy technology acquisitions 2021
+                  Why are you using firebase? What other options do you have to
+                  implement authentication?
                 </h5>
               </Link>
               <p className="font-normal text-gray-700 mb-3">
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
+                Firebase is using for user management and authentication and
+                hosting.
+                <ul>
+                  <li className="list-disc list-inside">Auth0</li>
+                  <li className="list-disc list-inside">MongoDB</li>
+                  <li className="list-disc list-inside">Passport</li>
+                  <li className="list-disc list-inside">Okta </li>
+                  <li className="list-disc list-inside">JSON Web Token</li>
+                  <li className="list-disc list-inside">Amazon</li>
+                  <li className="list-disc list-inside">Cognito</li>
+                  <li className="list-disc list-inside">Keycloak</li>
+                </ul>
               </p>
-              
             </div>
           </div>
         </div>
@@ -70,11 +74,7 @@ const Blog = () => {
         <div className="max-w-lg mx-auto">
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
             <Link to="">
-              <img
-                className="rounded-t-lg"
-                src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                alt=""
-              />
+              <img className="rounded-t-lg" src={image3} alt="" />
             </Link>
             <div className="p-5">
               <Link to="">
@@ -96,12 +96,15 @@ const Blog = () => {
                   <li className="list-disc list-inside">Cloud Messaging.</li>
                   <li className="list-disc list-inside">Hosting.</li>
                   <li className="list-disc list-inside">Cloud Storage.</li>
-                  <li className="list-disc list-inside">Crashlytics Google Analytics.</li>
-                  <li className="list-disc list-inside">Performance Monitoring.</li>
+                  <li className="list-disc list-inside">
+                    Crashlytics Google Analytics.
+                  </li>
+                  <li className="list-disc list-inside">
+                    Performance Monitoring.
+                  </li>
                   <li className="list-disc list-inside">In-App Messaging</li>
                 </ul>
               </p>
-              
             </div>
           </div>
         </div>
