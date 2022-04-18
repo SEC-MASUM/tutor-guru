@@ -16,36 +16,38 @@ const Header = () => {
 
   return (
     <nav className="bg-white px-2 py-3  ">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+      <div className="container flex flex-col  md:flex-row justify-center md:justify-between items-center md:items-center mx-auto">
         <Link to="/" className="flex items-center space-x-2">
           <img src={logo} className="h-10" alt="Red Onion Logo" />
-          <h1 className="font-bold text-2xl text-gray-800">Tutor Guru</h1>
+          <h1 className="font-bold whitespace-nowrap text-2xl text-gray-800">
+            Tutor Guru
+          </h1>
         </Link>
 
-        <ul className="flex space-x-8 text-sm font-medium items-center text-gra">
+        <ul className="flex flex-col md:flex-row space-y-2  md:space-x-8 md:items-center text-sm font-medium  text-gra">
           <Link
             to="/home"
-            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
+            className="uppercase text-center text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
           >
             Home
           </Link>
 
           <Link
             to="/blog"
-            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
+            className="uppercase text-center text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
           >
             Blog
           </Link>
           <Link
             to="/contact"
-            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
+            className="uppercase text-center text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
           >
             Contact
           </Link>
 
           <Link
             to="/about/me"
-            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600 whitespace-nowrap"
+            className="uppercase text-center text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600 whitespace-nowrap"
           >
             About Me
           </Link>
