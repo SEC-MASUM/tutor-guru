@@ -3,7 +3,7 @@ import React from "react";
 const Subject = ({subject}) => {
    const { name, description, img } = subject;
    return (
-     <div className="bg-black text-white text-center w-9/12 h-[300px]  flex  justify-center items-center mx-auto">
+     <div className="bg-black text-white text-center w-9/12 h-[300px]  flex  justify-center items-center my-4 mx-auto">
        <div className="space-y-4">
          <div className="flex justify-center">
            <img src={img} alt="" className="" />

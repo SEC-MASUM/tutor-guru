@@ -49,7 +49,7 @@ const Subjects = () => {
   return (
     <div className="container mx-auto  mb-10 text-center">
       <h1 className="font-bold text-5xl py-8">Subjects</h1>
-      <div className="grid grid-cols-3  gap-6 py-10 ">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2  md:gap-6 lg:grid-cols-3  lg:gap-6 py-10 ">
         {subjects.map((subject) => (
           <Subject key={subject.id} subject={subject}></Subject>
         ))}
