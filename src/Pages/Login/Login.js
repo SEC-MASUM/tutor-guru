@@ -99,7 +99,7 @@ const Login = () => {
           </form>
           {errorElement}
           <p>
-            New to Red Onion?{" "}
+            New to Tutor Guru?{" "}
             <Link to="/signup">
               <span className="text-rose-600">Create An Account</span>
             </Link>
