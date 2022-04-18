@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import img1 from "../../Assets/images/service/color-icon-1.png";
-import img2 from "../../Assets/images/service/color-icon-2.png";
-import img3 from "../../Assets/images/service/color-icon-6.png";
-import Service from "../Service/Service";
-import bottomPattern from "../../Assets/images/download/slider-bottom-pattern.png";
+import img1 from "../../../Assets/images/service/color-icon-1.png";
+import img2 from "../../../Assets/images/service/color-icon-2.png";
+import img3 from "../../../Assets/images/service/color-icon-6.png";
+import Service from "../../Home/Service/Service";
+import bottomPattern from "../../../Assets/images/download/slider-bottom-pattern.png";
 
 const Services = () => {
   const navigate = useNavigate();

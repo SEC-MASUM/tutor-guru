@@ -1,6 +1,7 @@
 import React from "react";
-import Services from "../../Services/Services";
+
 import Banner from "../Banner/Banner";
+import Services from "../Services/Services";
 import Subjects from "../Subjects/Subjects";
 
 const Home = () => {
