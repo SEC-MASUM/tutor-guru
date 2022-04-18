@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../Assets/images/logo/logo-1.png";
 import { BsFacebook, BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-
 import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
@@ -13,7 +12,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../Firebase/Firebase.init";
-import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+
 
 const Login = () => {
   const navigate = useNavigate();

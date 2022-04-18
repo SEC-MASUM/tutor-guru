@@ -11,7 +11,6 @@ import {
 } from "react-firebase-hooks/auth";
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../Firebase/Firebase.init";
-import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -45,8 +44,8 @@ const SignUp = () => {
     navigate(from, { replace: true });
   };
 
-  const handleGoogleLogin = async() => {
-     await signInWithGoogle();
+  const handleGoogleLogin = async () => {
+    await signInWithGoogle();
   };
 
   if (loading || updating || googleLoading) {
@@ -58,13 +57,11 @@ const SignUp = () => {
     console.log(user);
   }
   let errorElement;
-  if (createError || updateError || googleError ) {
+  if (createError || updateError || googleError) {
     console.error(createError || updateError || googleError);
     errorElement = (
       <p className="text-red-600 font-medium pb-4">
-        {createError?.message ||
-          updateError?.message ||
-          googleError.message}
+        {createError?.message || updateError?.message || googleError.message}
       </p>
     );
   }
