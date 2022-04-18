@@ -14,7 +14,7 @@ const Services = () => {
       id: 1,
       name: "School Groups",
       description:
-        "Passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+        "Group work can be an effective method to motivate students, encourage active learning, and develop key critical-thinking, communication, and decision-making skills.",
       img: img1,
       price: 350,
     },
@@ -22,7 +22,7 @@ const Services = () => {
       id: 2,
       name: "Creative Groups",
       description:
-        "Passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+        "Teachers who find creative ways to group students in the classroom can see many positive results. When compared to competitive and individual learning methods, group work tends to see a higher increase in academic improvement.",
       img: img2,
       price: 530,
     },
@@ -30,7 +30,7 @@ const Services = () => {
       id: 3,
       name: "Individual Tutoring",
       description:
-        "Passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+        "Individual tutoring may be especially helpful if you feel like you need help with specific parts of a course, or if your previous experience did not include.",
       img: img3,
       price: 120,
     },
