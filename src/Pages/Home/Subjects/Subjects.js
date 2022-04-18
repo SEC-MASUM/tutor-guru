@@ -1,10 +1,11 @@
 import React from "react";
+
+import english from "../../../Assets/images/subject/English.png";
+import science from "../../../Assets/images/subject/science.png";
+import physics from "../../../Assets/images/subject/physics.png";
+import chemistry from "../../../Assets/images/subject/chemistry.png";
+import geometry from "../../../Assets/images/subject/geometry.png";
 import Subject from "../Subject/Subject";
-import english from "../../Assets/images/subject/English.png";
-import science from "../../Assets/images/subject/science.png";
-import physics from "../../Assets/images/subject/physics.png";
-import chemistry from "../../Assets/images/subject/chemistry.png";
-import geometry from "../../Assets/images/subject/geometry.png";
 
 const Subjects = () => {
   const subjects = [

@@ -5,6 +5,7 @@ import Blog from "./Pages/Blog/Blog";
 import Checkout from "./Pages/Checkout/Checkout";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home/Home";
+import Subjects from "./Pages/Home/Subjects/Subjects";
 import Login from "./Pages/Login/Login";
 import NotFound from "./Pages/NotFound/NotFound";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
@@ -12,7 +13,7 @@ import Services from "./Pages/Services/Services";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import SignUp from "./Pages/SignUp/SignUp";
-import Subjects from "./Pages/Subjects/Subjects";
+
 
 function App() {
   return (
