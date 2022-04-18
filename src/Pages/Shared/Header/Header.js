@@ -29,12 +29,7 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
-            to="/services"
-            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
-          >
-            Services
-          </Link>
+
           <Link
             to="/blog"
             className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
@@ -50,7 +45,7 @@ const Header = () => {
 
           <Link
             to="/about/me"
-            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600"
+            className="uppercase text-sm font-semibold mx-1 hover:text-rose-500 focus:text-rose-600 transform duration-200 px-3 py-1 border-b-2 mx-2 hover:border-rose-600 focus:border-rose-600 whitespace-nowrap"
           >
             About Me
           </Link>
@@ -59,7 +54,7 @@ const Header = () => {
               <Link
                 to="/home"
                 onClick={logout}
-                className="text-white bg-rose-600 px-4 py-1.5 rounded-full"
+                className="text-white bg-rose-600 px-4 py-1.5 rounded-full whitespace-nowrap"
               >
                 Sign out
               </Link>
@@ -74,7 +69,7 @@ const Header = () => {
 
                 <Link
                   to="/signup"
-                  className="text-white bg-rose-600 px-4 py-1.5 rounded-full"
+                  className="text-white bg-rose-600 px-4 py-1.5 rounded-full whitespace-nowrap"
                 >
                   Sign up
                 </Link>
