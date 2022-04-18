@@ -4,7 +4,11 @@ import logo from "../../Assets/images/logo/logo-1.png";
 import { BsFacebook, BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import Loading from "../Shared/Loading/Loading";
 import auth from "../../Firebase/Firebase.init";
 
 const SignUp = () => {
@@ -19,20 +23,30 @@ const SignUp = () => {
   let from = location.state?.from?.pathname || "/";
 
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  const handleSignUp = (event) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
     console.log(name, email, password, confirmPassword);
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName: name });
+    console.log("Updated profile");
+    // navigate("/");
+    navigate(from, { replace: true });
   };
 
+  if (loading || updating) {
+    return <Loading></Loading>;
+  }
+
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
+    console.log(user);
   }
 
   return (
