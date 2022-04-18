@@ -1,11 +1,13 @@
 import React, { useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../Assets/images/logo/logo-1.png";
-
+import { BsFacebook, BsGithub } from "react-icons/bs";
+import { FcGoogle } from "react-icons/fc";
 
 import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,6 +28,9 @@ const Login = () => {
   const [sendPasswordResetEmail, sending, passwordResetError] =
     useSendPasswordResetEmail(auth);
 
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+
   let from = location.state?.from?.pathname || "/";
 
   const handleLogin = (e) => {
@@ -34,6 +39,10 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
     signInWithEmailAndPassword(email, password);
+  };
+
+  const handleGoogleLogin = async () => {
+    await signInWithGoogle();
   };
 
   const resetPassword = async () => {
@@ -50,18 +59,18 @@ const Login = () => {
     }
   };
 
-  if (user) {
+  if (user || googleUser) {
     navigate(from, { replace: true });
   }
-  if (loading || sending) {
+  if (loading || sending || googleLoading) {
     return <Loading></Loading>;
   }
   let errorElement;
-  if (signInError || passwordResetError) {
-    console.error(signInError || passwordResetError);
+  if (signInError || passwordResetError || googleError) {
+    console.error(signInError || passwordResetError || googleError);
     errorElement = (
       <p className="text-red-600 font-medium pb-4">
-        {signInError?.message || passwordResetError?.message}
+        {signInError?.message || passwordResetError?.message || googleError?.message}
       </p>
     );
   }
@@ -115,7 +124,24 @@ const Login = () => {
             </button>
           </p>
         </div>
-        <SocialLogin></SocialLogin>
+        <div className="flex justify-center mt-3">
+          <div className="flex w-3/5 text-center items-center ">
+            <div className="w-full block h-1 bg-rose-600"></div>
+            <div className="block px-4">Or</div>
+            <div className="w-full block h-1 bg-rose-600"></div>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-5 space-x-4">
+          <button id="facebook-login" className="text-2xl  text-blue-600">
+            <BsFacebook></BsFacebook>
+          </button>
+          <button onClick={handleGoogleLogin} className="text-2xl">
+            <FcGoogle></FcGoogle>
+          </button>
+          <button className="text-2xl">
+            <BsGithub></BsGithub>
+          </button>
+        </div>
       </div>
       <ToastContainer />
     </div>

@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../Assets/images/logo/logo-1.png";
+import { BsFacebook, BsGithub } from "react-icons/bs";
+import { FcGoogle } from "react-icons/fc";
 
 import {
   useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Loading from "../Shared/Loading/Loading";
@@ -25,6 +28,9 @@ const SignUp = () => {
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+
   const handleSignUp = async (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
@@ -39,20 +45,26 @@ const SignUp = () => {
     navigate(from, { replace: true });
   };
 
-  if (loading || updating) {
+  const handleGoogleLogin = async() => {
+     await signInWithGoogle();
+  };
+
+  if (loading || updating || googleLoading) {
     return <Loading></Loading>;
   }
 
-  if (user) {
+  if (user || googleUser) {
     // navigate(from, { replace: true });
     console.log(user);
   }
   let errorElement;
-  if (createError || updateError) {
-    console.error(createError || updateError);
+  if (createError || updateError || googleError ) {
+    console.error(createError || updateError || googleError);
     errorElement = (
       <p className="text-red-600 font-medium pb-4">
-        {createError?.message || updateError?.message}
+        {createError?.message ||
+          updateError?.message ||
+          googleError.message}
       </p>
     );
   }
@@ -116,7 +128,24 @@ const SignUp = () => {
             </Link>
           </p>
         </div>
-        <SocialLogin></SocialLogin>
+        <div className="flex justify-center mt-3">
+          <div className="flex w-3/5 text-center items-center ">
+            <div className="w-full block h-1 bg-rose-600"></div>
+            <div className="block px-4">Or</div>
+            <div className="w-full block h-1 bg-rose-600"></div>
+          </div>
+        </div>
+        <div className="flex justify-center items-center p-5 space-x-4">
+          <button id="facebook-login" className="text-2xl  text-blue-600">
+            <BsFacebook></BsFacebook>
+          </button>
+          <button onClick={handleGoogleLogin} className="text-2xl">
+            <FcGoogle></FcGoogle>
+          </button>
+          <button className="text-2xl">
+            <BsGithub></BsGithub>
+          </button>
+        </div>
       </div>
     </div>
   );
